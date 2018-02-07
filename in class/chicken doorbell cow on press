@@ -1,0 +1,34 @@
+var mySound;
+
+function preload() {
+  mySound= loadSound('assets/chicken.m4a');
+  mySound2= loadSound('assets/doorbell.mp3');
+  mySound3= loadSound('assets/moo.mp3');
+}
+
+
+function setup() {
+  mySound.setVolume(0.1);
+  createCanvas(100, 100);
+}
+
+function draw() {
+  if (mySound.isPlaying()) {
+
+    background(240);
+  } else {
+    background(120);
+  }
+}
+
+function keyPressed() {
+  if (key == 'C') { //chicken 
+    mySound.play();
+  }
+  if (key == 'D') { //doorbell 
+    mySound2.play();
+  }
+  if (key == 'M') { //moo 
+    mySound3.play();
+  }
+}

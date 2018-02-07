@@ -1,0 +1,25 @@
+var rate = 0.1;
+var x = 0;
+var y = 0;
+
+var rate2 = 0.05;
+
+var x2 = 400;
+var y2 = 400;
+
+function setup() {
+	createCanvas(400, 400);
+	fill('blue');
+}
+
+
+function draw() {
+	background(255);
+	ellipse(x, y, 15, 15);
+	x = mouseX * rate + x * (1 - rate);
+	y = mouseY * rate + y * (1 - rate);
+
+	ellipse(x2, y2, 15, 15);
+	x2 = mouseX * rate2 + x2 * (1 - rate);
+	y2 = mouseY * rate2 + y2 * (1 - rate);
+}

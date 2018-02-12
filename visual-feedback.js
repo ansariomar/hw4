@@ -46,7 +46,8 @@ function setup() {
 
 function draw() {
   background(255, 255, 0)
-  text('click here,\nthen press A/S/D/F\n keys to play', width/2, 200);
+  text('Click once\n inside the canvas.\nThen press A/S/D/F\n keys to play.\n:P', width/2, 150);
+  textSize(50)
   if (playingA) {
     background(58,172,226);
     }
@@ -61,50 +62,3 @@ function draw() {
     }
 }
   
- 
-function keyPressed() {
-    print("got key press for ", key);
-    var osc;
-    if (key == 'A') {
-      osc = oscA;
-      playingA = true
-    } else if (key == 'S') {
-      osc = oscS;
-      playingS = true
-    } else if (key == 'D') {
-      osc = oscD;
-      playingD = true
-
-    } else if (key == 'F') {
-      osc = oscF;
-      playingF = true
-    }
-    if (osc) {
-      osc.amp(0.5, 0.1);
-      playing = true;
-    }
-}
-
-  function keyReleased() {
-    print("got key release for ", key);
-    var osc;
-    if (key == 'A') {
-      osc = oscA;
-      playingA = false
-    } else if (key == 'S') {
-      osc = oscS;
-      playingS = false
-    } else if (key == 'D') {
-      osc = oscD;
-      playingD = false
-
-    } else if (key == 'F') {
-      osc = oscF;
-      playingF = false
-
-    }
-    if (osc) {
-      osc.amp(0, 0.5);
-      playing = false;
-    }
-  }

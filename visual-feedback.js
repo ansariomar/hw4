@@ -62,3 +62,50 @@ function draw() {
     }
 }
   
+ 
+function keyPressed() {
+    print("got key press for ", key);
+    var osc;
+    if (key == 'A') {
+      osc = oscA;
+      playingA = true
+    } else if (key == 'S') {
+      osc = oscS;
+      playingS = true
+    } else if (key == 'D') {
+      osc = oscD;
+      playingD = true
+
+    } else if (key == 'F') {
+      osc = oscF;
+      playingF = true
+    }
+    if (osc) {
+      osc.amp(0.5, 0.1);
+      playing = true;
+    }
+}
+
+  function keyReleased() {
+    print("got key release for ", key);
+    var osc;
+    if (key == 'A') {
+      osc = oscA;
+      playingA = false
+    } else if (key == 'S') {
+      osc = oscS;
+      playingS = false
+    } else if (key == 'D') {
+      osc = oscD;
+      playingD = false
+
+    } else if (key == 'F') {
+      osc = oscF;
+      playingF = false
+
+    }
+    if (osc) {
+      osc.amp(0, 0.5);
+      playing = false;
+    }
+  }

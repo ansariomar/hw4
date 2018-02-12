@@ -1,3 +1,7 @@
+// http://alpha.editor.p5js.org/omarprograms/sketches/SkiKOoA8z
+//use the above link in order to run the program with the necessary asset
+
+
 var freqA = 174;
 var freqS = 196;
 var freqD = 220;
@@ -173,5 +177,3 @@ function mousePressed(){
 function mouseReleased(){
 	mickey = false;
 }
-// http://alpha.editor.p5js.org/omarprograms/sketches/SkiKOoA8z
-//use the above link in order to run the program with the necessary asset

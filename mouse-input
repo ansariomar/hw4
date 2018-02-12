@@ -93,7 +93,8 @@ function setup() {
 
 function draw() {
   background(255, 255, 0)
-  text('click here,\nthen press A/S/D/F\n keys to play', width/2, 200);
+  text('Click once inside\n the canvas to begin.\nThen press A/S/D/F\n keys to play.\nClick and hold for fun!\n(ᵔᴥᵔ)', width/2, 100);
+  textSize(50)
   if (playingA) {
     lewittParty();
     
